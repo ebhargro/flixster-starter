@@ -43,7 +43,6 @@ const [view, setView] = useState('now_playing');
   };
     
     const handleSortChange = (e) => {
-          console.log(e.target.value)
     setSortBy(e.target.value);
       };
     
@@ -75,7 +74,8 @@ const [view, setView] = useState('now_playing');
       setSearchResults([]);
       setSearchError(null);
       setSearchQuery('');
-    } 
+    } else {
+    }
   };
 
   // Controlled input for search
