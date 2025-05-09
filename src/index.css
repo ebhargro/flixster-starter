@@ -15,8 +15,10 @@ body {
   background: var(--color-bg-primary);
   color:      var(--color-text-primary);
   margin: 0;
-  font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 a, button, input, select {
   font-family: inherit;
 }
+

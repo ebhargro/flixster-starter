@@ -9,6 +9,7 @@ const MovieHeader = () =>
 const MovieFooter = () => 
   <div className="movie-footer"> 
     Copyright 2025 
+    Created by Ebony Hargro 
   </div>
 
 const App = () => 
