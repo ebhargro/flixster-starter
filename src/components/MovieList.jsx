@@ -28,7 +28,7 @@ const [view, setView] = useState('now_playing');
     )
       .then(res => res.json())
       .then(data => {
-        setMovies(data.results);
+          setMovies(data.results);
         setTotalPages(data.total_pages);
       })
       .catch(err => console.error('TMDb fetch error:', err))
@@ -74,14 +74,19 @@ const [view, setView] = useState('now_playing');
       setSearchResults([]);
       setSearchError(null);
       setSearchQuery('');
-    } else {
-    }
+    } 
   };
 
   // Controlled input for search
   const handleSearchChange = e => {
     setSearchQuery(e.target.value);
   };
+    
+    const handleSearchReset = () => {
+        setSearchQuery('');
+        setSearchResults(movies);
+
+    }
 
   // Execute search on submit
   const handleSearchSubmit = e => {
@@ -146,13 +151,19 @@ const [view, setView] = useState('now_playing');
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
-            placeholder="Search movies..."
-            className={styles.searchInput}
+            placeholder="Search for your favorite movie..."
+             className={styles.searchInput}
+            onKeyDown={e => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleSearchSubmit(e);
+        }
+      }}
           />
           <button type="submit" className={styles.searchButton}>
             🔍
             </button>
-                  {searchQuery?.length > 0 && <button type="button" className={styles.searchClearButton} onClick={() => setSearchQuery('')}>
+                  {searchQuery?.length > 0 && <button type="button" className={styles.searchClearButton} onClick={handleSearchReset}>
                       Clear/Reset
                   </button>}
         </form>
