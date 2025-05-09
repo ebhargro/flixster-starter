@@ -10,6 +10,13 @@ export default function PosterModal({ movie, onClose }) {
       overview,
     original_language
   } = movie;
+    
+    const fakeRunTime = Math.floor(Math.random() * (200 - 60 + 1)) + 60;
+    const fakeGenres = ['Horror', 'Action', 'Comedy', 'Romance', 'Sci-Fi', 'Suspsense', 'Thriller', 'Drama'
+    ]
+    const randomThree = fakeGenres
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 3);
 
   return (
     <div className={styles.overlay} onClick={onClose}>
@@ -41,8 +48,19 @@ export default function PosterModal({ movie, onClose }) {
 
         {release_date && (
           <p><strong>Release Date:</strong> {release_date}</p>
-        )}
+              )}
+              
+              <p><strong> Runtime: {fakeRunTime} min </strong></p>
+              <p>
+                  
 
+  {randomThree.map((genre, i) => (
+    <>
+      <strong>{genre}</strong>
+      {i < randomThree.length - 1 && ', '}
+    </>
+  ))}
+</p>
         {overview && (
           <p className={styles.overview}>{overview}</p>
         )}
