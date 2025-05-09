@@ -4,11 +4,11 @@ import styles from './PosterModal.module.css';
 export default function PosterModal({ movie, onClose }) {
   const {
     title,
-    runtime,
     backdrop_path,
-    release_date,
-    genres,
-    overview,
+      release_date,
+    popularity,
+      overview,
+    original_language
   } = movie;
 
   return (
@@ -31,19 +31,16 @@ export default function PosterModal({ movie, onClose }) {
 
         <h2 className={styles.title}>{title}</h2>
 
-        {runtime != null && (
-          <p><strong>Runtime:</strong> {runtime} min</p>
+        {popularity != null && (
+          <p><strong>Popularity Score:</strong> {popularity.toFixed(0)}</p>
+              )}
+              
+        {original_language != null && (
+          <p><strong>Original Language:</strong> {original_language.toUpperCase()}</p>
         )}
 
         {release_date && (
-          <p><strong>Release:</strong> {release_date}</p>
-        )}
-
-        {Array.isArray(genres) && genres.length > 0 && (
-          <p>
-            <strong>Genres:</strong>{' '}
-            {genres.map(g => g.name).join(', ')}
-          </p>
+          <p><strong>Release Date:</strong> {release_date}</p>
         )}
 
         {overview && (
