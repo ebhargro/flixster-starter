@@ -1,19 +1,22 @@
+:root {
+  /* BACKGROUNDS */
+  --color-bg-primary:  #121212; /* black-ish theater lobby */
+  --color-bg-secondary:#1F1F1F; /* screen bezel */
+  /* TEXT */
+  --color-text-primary:#FFFFFF; /* subtitles */
+  --color-text-secondary:#CCCCCC; /* disclaimers */
+  /* ACCENT */
+  --color-accent:      #E50914; /* ticket-stub red */
+  --color-accent-hover:#B20710; /* darker red */
+}
+
+/* apply base colors */
 body {
+  background: var(--color-bg-primary);
+  color:      var(--color-text-primary);
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: sans-serif;
 }
-
-button {
-  background-color: #282c34;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #777;
-  color: white;
+a, button, input, select {
+  font-family: inherit;
 }
