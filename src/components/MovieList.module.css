@@ -163,3 +163,7 @@
     width: 100%;
   }
 }
+
+.searchClearButton {
+    color: gray;
+}
