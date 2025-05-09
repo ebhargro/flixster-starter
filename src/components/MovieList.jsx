@@ -35,7 +35,7 @@ const [view, setView] = useState('now_playing');
       .finally(() => setLoading(false));
   }, [page, view]);
 
-  // Handlers for “Load More”
+
   const loadMore = () => {
     if (!loading && page < totalPages) {
       setPage(p => p + 1);
@@ -75,11 +75,7 @@ const [view, setView] = useState('now_playing');
       setSearchResults([]);
       setSearchError(null);
       setSearchQuery('');
-    } else {
-      // reset now playing if you want fresh
-      // setMovies([]);
-      // setPage(1);
-    }
+    } 
   };
 
   // Controlled input for search
@@ -155,7 +151,10 @@ const [view, setView] = useState('now_playing');
           />
           <button type="submit" className={styles.searchButton}>
             🔍
-          </button>
+            </button>
+                  {searchQuery?.length > 0 && <button type="button" className={styles.searchClearButton} onClick={() => setSearchQuery('')}>
+                      Clear/Reset
+                  </button>}
         </form>
           )}
           {displayed.length > 0 && (
