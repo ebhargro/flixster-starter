@@ -26,3 +26,18 @@
     flex-direction: column;
   }
 }
+
+.movie-header {
+  display: flex;
+  text-align: left;
+  border-bottom: 2px solid white;
+  padding: 10px;
+}
+
+
+.movie-footer {
+   display: flex;
+  text-align: left;
+  border-top: 2px solid white;
+  padding: 10px;
+}
