@@ -10,7 +10,7 @@
 }
 
 .modal {
-  background: #fff;
+  background: black;
   border-radius: 8px;
   max-width: 600px;
   width: 90%;
@@ -22,11 +22,12 @@
 
 .close {
   position: absolute;
-  top: 0.5rem; right: 0.5rem;
+  top: 0.8rem; right: 0.8rem;
   border: none;
   background: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: gray;
 }
 
 .backdrop {
