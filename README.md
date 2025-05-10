@@ -12,7 +12,7 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-4
 
 - [x] **Display Movies**
   - [x] Users can view a list of current movies from The Movie Database API in a grid view.
-    - [ ] Movie tiles should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
+    - [x] Movie tiles should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
   - [x] For each movie displayed, users can see the movie's:
     - [x] Title
     - [x] Poster image
@@ -68,9 +68,7 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-4
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+https://www.loom.com/share/2e5db42efad84cf8aebc9d1d8d477389?sid=4ee55d32-6294-495d-8183-ff86dfe0ea8e
 
 ### Reflection
 
